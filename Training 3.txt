@@ -1,0 +1,160 @@
+#include <iostream>
+#include <cmath>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+void summa(int **X,int N3);
+double srar(int **X,int N2);
+int min(int **X,int N1);
+int main() {
+	int n,n1;
+	cin>>n;
+	cin>>n1;
+	cout<<endl;
+	int **A=new int*[n];
+	for (int i=0;i<n;i++)
+	A[i]=new int[n];
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
+			cin>>A[i][j];
+		//A[i][j]=rand()%100 + 1;
+		}
+	}
+	for(int i=0;i<n;i++)
+	{for(int j=0;j<n;j++)
+	cout<<A[i][j]<<"\t";
+	cout<<endl;
+	}
+	cout<<endl;
+		int **B=new int*[n1];
+	for (int i=0;i<n1;i++)
+	B[i]=new int[n1];
+	for(int i=0;i<n1;i++)
+	{
+		for(int j=0;j<n1;j++)
+		{
+			cin>>B[i][j];
+		//B[i][j]=rand()%100 + 1;
+		}
+	}
+	for(int i=0;i<n1;i++)
+	{for(int j=0;j<n1;j++)
+	cout<<B[i][j]<<"\t";
+	cout<<endl;
+	}
+	
+	int nomA;
+	int nomB;
+	nomA=min(A,n);
+	nomB=min(B,n1);
+	if (nomA%2==0 && nomB%2!=0)
+	{
+		cout<<"element ne v chetnoy stroke B"<<endl;
+	double srA;
+	srA=srar(A,n);
+	cout<<srA;	
+	summa(B,n1);
+	} 
+	else if (nomB%2==0 && nomA%2!=0)
+	{
+		cout<<"element ne v chetnoy stroke A"<<endl;
+		double srB;
+		srB=srar(B,n1);
+		cout<<srB;
+		summa(A,n);
+	}
+	else if (nomA%2==0 && nomB%2==0)
+	{
+		cout<<"element v chetnoy stroke v oboih stobcah"<<endl;
+	}
+		else if (nomA%2!=0 && nomB%2!=0)
+	{
+		cout<<"element v nechetnoy stroke v oboih stobcah"<<endl;
+	}
+	
+	cout<<endl;
+	for(int i=0;i<n;i++)
+	{for(int j=0;j<n;j++)
+	cout<<A[i][j]<<"\t";
+	cout<<endl;
+	}
+	cout<<endl;
+		for(int i=0;i<n1;i++)
+	{for(int j=0;j<n1;j++)
+	cout<<B[i][j]<<"\t";
+	cout<<endl;
+	}
+	
+	for(int i=0;i<n;i++)
+	{
+		delete []A[i];
+			}
+			delete []A;
+			for (int i=0;i<n1;i++)
+			{
+				delete []B[i];
+			}
+			delete []B;
+	return 0;
+}
+int min(int **X,int N1)
+{
+	int mine=X[0][0];
+	int nom=0;
+	for(int i=0;i<N1;i++)
+	{
+		for(int j=0;j<N1;j++)
+		{
+			if (mine>X[i][j])
+			{
+				mine=X[i][j];
+				nom=i;
+			}
+		}
+	}
+	return nom;
+}
+double srar(int **X,int N2)
+{
+	int sred=0;
+	int kol=0;
+	for(int i=0;i<N2-1;i++)
+	{
+		for(int j=i+1;j<N2;j++)
+		{
+			sred=X[i][j]+sred;
+			kol++;
+		}
+	}
+	return (double)sred/kol;
+}
+void summa(int **X,int N3)
+{
+	int min=X[0][0];
+for(int i=0;i<N3;i++)
+{
+	for(int j=0;j<N3;j++)
+	{
+		if (i==j)
+		{
+		if (min>X[i][j])
+		{
+			min=X[i][j];
+		}	
+		}
+	}
+}
+for (int i=0;i<N3;i++)
+{
+	for(int j=0;j<N3;j++)
+	{
+		if(i==j)
+		{
+			X[i][j]=X[i][j]+min;
+		}
+	}
+}	
+}

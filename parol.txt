@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <string>
+using namespace std;
+int main()
+{
+string valid_pass = "123";
+string user_pass;
+cout<<"vvedi"<<endl;
+getline(cin,user_pass);
+if (user_pass==valid_pass)
+{cout<<"yes"<<endl;
+}
+else {
+	cout<<"No"<<endl;
+}
+	return 0;
+}

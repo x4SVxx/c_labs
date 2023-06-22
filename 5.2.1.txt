@@ -1,0 +1,60 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+struct TABL
+{
+int Grup;//Группа
+ char FIO[50];//ФИО
+  int Year;//Год рождения
+   char Pol[1];//Пол
+	int Phisic;//Оценка по физике
+	 int Info;//Оценка по информатике
+	  double Step;//Стипендия
+	};
+int main()
+{
+TABL mas[10]; int n;
+int c=0;
+char ch;
+char *S;
+cout<<"VVedite chislo studentov"<<endl;
+cin>>n;
+cout<<"Zapolnite tablicy"<<endl;
+for (int i=0;i<n;i++)
+{
+cout<<"VVedite nomer gruppi"<<endl;
+cin>>mas[i].Grup;
+cout<<"VVedite FIO"<<endl;
+cin>>mas[i].FIO;
+cout<<"VVedite god rogdeniya"<<endl;
+cin>>mas[i].Year;
+cout<<"VVedite pol"<<endl;
+cin>>mas[i].Pol;
+cout<<"VVedite ocenky po phisike"<<endl;
+cin>>mas[i].Phisic;
+cout<<"VVedite ocenky po informatike"<<endl;
+cin>>mas[i].Info;
+cout<<"VVedite razmer stipendii"<<endl;
+cin>>mas[i].Step;
+}
+cout<<"YCHENIKI NE POLYCHAYSHIE STEPENDIY:"<<endl;
+for(int i=0;i<n;i++)
+{
+if(mas[i].Step==0)
+{
+S=mas[i].FIO;
+cout<<S<<endl;
+if(mas[i].Phisic==3 || mas[i].Phisic==4 || mas[i].Phisic==5)
+{
+if (mas[i].Info==3 || mas[i].Info==4 || mas[i].Info==5)
+{c=c+1;
+}
+}
+}
+}
+cout<<"IZ NIH IMEYT VSE POLOGITEL'NIE OCENKI"<<endl;
+cout<<c<<endl;
+cin>>ch;
+	return 0;
+}

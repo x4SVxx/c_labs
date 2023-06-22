@@ -1,0 +1,88 @@
+#include <iostream>
+#include <cmath>
+#include <stdlib.h>
+using namespace std;
+double srar(double X[], double y)
+{
+	double j=0;
+	double k=0;
+	for(int i=0; i<y; i++)
+	{
+	if (X[i]<0)
+	{
+		j=j+X[i];
+		k=k+1;
+	}	
+	}
+	return j/k;
+}
+int min(double Y[], double x)
+{
+	double m;
+	m=Y[0];
+	for(int i=0;i<x;i++)
+	{
+	if (Y[i]<m)
+	{
+		m=Y[i];
+	}	
+	}
+return m;
+}
+int main() {
+double *A,*B;
+int n,m;
+cout<<"Vvedite razmer massiva 1"<<endl;
+cin>>n;
+cout<<"Vvedite razmer massiva 2"<<endl;
+cin>>m;
+A=new double [n];
+B=new double [m];
+cout<<"Vvedite elementi massiva A"<<endl;
+for (int i=0;i<n;i++)
+{cout<<"A["<<i+1<<"]=";
+cin>>A[i];
+}
+cout<<endl;
+cout<<"Massive A=\n";
+for (int i=0;i<n;i++)
+{cout<<A[i]<<"\t";
+}
+cout<<endl;
+cout<<"Vvedite elementi massiva B"<<endl;
+for (int i=0;i<m;i++)
+{cout<<"B["<<i+1<<"]=";
+cin>>B[i];
+}
+cout<<endl;
+cout<<"Massive B=\n";
+for (int i=0;i<m;i++)
+{cout<<B[i]<<"\t";
+}
+cout<<endl;
+double SRA;
+double SRB;
+SRA=srar(A,n);
+SRB=srar(B,m);
+cout<<"Srednee arifmeticheskoe otricatel'nih elementov massiva A="<<SRA<<endl;
+cout<<"Srednee arifmeticheskoe otricatel'nih elementov massiva B="<<SRB<<endl;
+double SRAM;
+double SRBM;
+if (SRA>SRB)
+{
+	SRAM=min(A,n);
+	cout<<"Minimalniy element massiva A="<<SRAM<<endl;
+}
+else if (SRA<SRB)
+{
+	SRBM=min(B,m);
+	cout<<"Minimalniy element massiva B="<<SRBM<<endl;
+}
+else if (SRA==SRB)
+{
+	cout<<"Srednee arifmeticheskoe ravno"<<endl;
+}
+delete []A;
+delete []B;
+	return 0;
+}

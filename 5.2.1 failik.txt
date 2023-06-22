@@ -1,0 +1,56 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <fstream>
+using namespace std;
+struct TABL
+{
+int Grup;
+ char FIO[50];
+  int Year;
+   char Pol[1];
+	int Phisic;
+	 int Info;
+	  double Step;
+	};
+int main()
+{
+TABL mas[10]; int n;
+int c=0;
+char ch;
+char *S;
+ifstream ifile;
+ofstream ofile;
+ifile.open("mydatavvod.txt");
+ifile>>n;
+for (int i=0;i<n;i++)
+{
+ifile>>mas[i].Grup;
+ifile>>mas[i].FIO;
+ifile>>mas[i].Year;
+ifile>>mas[i].Pol;
+ifile>>mas[i].Phisic;
+ifile>>mas[i].Info;
+ifile>>mas[i].Step;
+}
+ifile.close();
+cout<<"Ycheniki ne polychayshie stependiy:"<<endl;
+for(int i=0;i<n;i++)
+{
+if(mas[i].Step==0)
+{
+S=mas[i].FIO;
+cout<<S<<endl;
+if(mas[i].Phisic==3 || mas[i].Phisic==4 || mas[i].Phisic==5)
+{
+if (mas[i].Info==3 || mas[i].Info==4 || mas[i].Info==5)
+{c=c+1;
+}
+}
+}
+}
+cout<<"Iz nih imeyt vse pologitelnie znacheniya:"<<endl;
+cout<<c<<endl;
+cin>>ch;
+	return 0;
+}

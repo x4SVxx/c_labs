@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <stdlib.h>
+using namespace std;
+void display(int n1,double A[], double B[],double &min)
+{
+	min=A[0];
+	for(int i=0;i<n1;i++)
+    {if (A[i]<min)
+    {min=A[i];
+    }
+    }
+	{for(int j=0;j<n1;j++)
+	{if (B[j]<min)
+	{min=B[j];
+	}
+	}
+	}
+}
+int main()
+{int n1;
+char ch;
+double min;
+double *a;
+double *b;
+cout<<"Vvedite razmer massiva"<<endl;
+cin>>n1;
+a=new double [n1];
+b=new double [n1];
+cout<<"Vvedite elementi massiva X"<<endl;
+for(int k=0;k<n1;k++)
+{cin>>a[k];
+}
+cout<<"Vvedite elementi massiva Y"<<endl;
+for(int p=0;p<n1;p++)
+{cin>>b[p];
+}
+display(n1,a,b,min);
+cout<<"Naimenshiy element="<<min<<endl;
+delete[]a;
+delete[]b;
+cin>>ch;
+	return 0;
+}

@@ -1,0 +1,120 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+#include <fstream>
+#include <stdlib.h>
+using namespace std;
+struct TABL
+{
+int Grup;
+ char FIO[50];
+  int Year;
+   char Pol[1];
+	int Phisic;
+	 int Info;
+	  double Step;
+	}el,el1;
+int main()
+{
+TABL mas[10];
+int n;
+int c=0;
+char ch;
+char *S;
+cout<<"kolichestvo ychenikov"<<endl;
+cin>>n;
+ifstream ifile;
+ofstream ofile;
+ofile.open("mydatavivod.txt");
+if (!ifile)
+{
+cout<<"Oshibka"<<endl;
+exit(0);
+}
+for (int i=0;i<n;i++)
+{
+	cout<<"gruppa\n";
+	cin>>el.Grup;
+	cout<<"FIO\n";
+	cin>>el.FIO;
+	cout<<"god\n";
+	cin>>el.Year;
+	cout<<"pol\n";
+	cin>>el.Pol;
+	cout<<"phisica\n";
+	cin>>el.Phisic;
+	cout<<"informatika\n";
+	cin>>el.Info;
+	cout<<"stependiya\n";
+	cin>>el.Step;
+	ofile<<el.Grup<<endl;
+	ofile<<el.FIO<<endl;
+	ofile<<el.Year<<endl;
+	ofile<<el.Pol<<endl;
+	ofile<<el.Phisic<<endl;
+	ofile<<el.Info<<endl;
+	ofile<<el.Step<<endl;
+}
+ofile.close();
+ifile.open("mydatavivod.txt");
+if (!ofile)
+{
+cout<<"Oshibka"<<endl;
+exit(0);
+}
+for(int i=0;i<n;i++)
+{
+	ifile>>el1.Grup;cout<<"gruppaTEXT= ";
+	cout<<el1.Grup<<endl;
+	ifile>>el1.FIO;cout<<"FIOTEXT= ";
+	cout<<el1.FIO<<endl;
+	ifile>>el1.Year;cout<<"godTEXT= ";
+	cout<<el1.Year<<endl;
+	ifile>>el1.Pol;cout<<"polTEXT= ";
+	cout<<el1.Pol<<endl;
+	ifile>>el1.Phisic;cout<<"phisicaTEXT= ";
+	cout<<el1.Phisic<<endl;
+	ifile>>el1.Info;cout<<"informatikaTEXT= ";
+	cout<<el1.Info<<endl;
+	ifile>>el1.Step;cout<<"stependiyaTEXT= ";
+	cout<<el1.Step<<endl;
+}
+ifile.close();
+ifile.open("mydatavivod.txt");
+if (!ofile)
+{
+cout<<"Oshibka"<<endl;
+exit(0);
+}
+for (int i=0;i<n;i++)
+{
+ifile>>mas[i].Grup;
+ifile>>mas[i].FIO;
+ifile>>mas[i].Year;
+ifile>>mas[i].Pol;
+ifile>>mas[i].Phisic;
+ifile>>mas[i].Info;
+ifile>>mas[i].Step;
+}
+ifile.close();
+cout<<"Ycheniki ne polychayshie stependiy:"<<endl;
+for(int i=0;i<n;i++)
+{
+if(mas[i].Step==0)
+{
+S=mas[i].FIO;
+cout<<S<<endl;
+if(mas[i].Phisic==3 || mas[i].Phisic==4 || mas[i].Phisic==5)
+{
+if (mas[i].Info==3 || mas[i].Info==4 || mas[i].Info==5)
+{c=c+1;
+}
+}
+}
+}
+cout<<"Iz nih imeyt vse pologitelnie ocenki:"<<endl;
+cout<<c<<endl;
+ifile.close();
+cin>>ch;
+	return 0;
+}

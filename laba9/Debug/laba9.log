@@ -1,0 +1,14 @@
+﻿  laba9.cpp
+E:\C++\laba9\laba9.cpp(143,13): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+E:\C++\laba9\laba9.cpp(226): message : выполняется компиляция ссылки на экземпляр шаблон функции "void solution1NECHET<int>(T *,int)"
+          with
+          [
+              T=int
+          ]
+E:\C++\laba9\laba9.cpp(165,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+E:\C++\laba9\laba9.cpp(228): message : выполняется компиляция ссылки на экземпляр шаблон функции "void solution2NECHET<int>(T *,int)"
+          with
+          [
+              T=int
+          ]
+  laba9.vcxproj -> E:\C++\laba9\Debug\laba9.exe

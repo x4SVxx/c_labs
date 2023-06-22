@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+int main() {
+	char ch;
+	double *a;
+	int n1;
+	double S;
+	cout<<"N="<<endl;
+	cin>>n1;
+	a=new double[n1];
+	cout<<"array elements"<<endl;
+	for(int k=0;k<n1;k++)
+	{
+	cin>>a[k];
+	}
+	S=a[1]*a[0];
+	for(int k=2;k<n1;k++)
+	{if (a[k]*a[k-1]>S)
+	{S=a[k]*a[k-1];
+	}
+	}
+	cout<<"result="<<S<<endl;
+	delete[]a;
+	cin>>ch;
+	return 0;
+}

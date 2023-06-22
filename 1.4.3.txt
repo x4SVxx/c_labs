@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <stdlib.h>
+using namespace std;
+int main() {
+	char ch;
+	const int n=10;
+	int n1;
+	double S;
+	cout<<"N="<<endl;
+	cin>>n1;
+        if(n1<0||n1>n)
+        {cout<<"ERROR INPUT"<<endl;
+        exit(0);
+        }
+	int X[n];
+	cout<<"array elements"<<endl;
+	for(int k=0;k<n1;k++)
+	{
+	cin>>X[k];
+	}
+	S=X[1]*X[0];
+	for(int k=2;k<n1;k++)
+	{if (X[k]*X[k-1]>S)
+	{S=X[k]*X[k-1];
+	}
+	}
+	cout<<"result="<<S<<endl;
+	cin>>ch;
+	return 0;
+}

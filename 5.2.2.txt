@@ -1,0 +1,56 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+struct DRIVE
+{
+int Num;
+ char Nach[50];
+ char Kon[50];
+  char Ost[50];
+	int Time;
+	 int Interv;
+	};
+	int main()
+{
+DRIVE mas[10]; int n;
+char ch;
+char *S;
+int C;
+int V;
+int o=0;
+cout<<"VVedite chislo marshrutah"<<endl;
+cin>>n;
+cout<<"Zapolnite tablicy"<<endl;
+for (int i=0;i<n;i++)
+{
+cout<<"VVedite nomer marshruta"<<endl;
+cin>>mas[i].Num;
+cout<<"VVedite nachal'niy pynkt"<<endl;
+cin>>mas[i].Nach;
+cout<<"VVedite konechniy pynkt"<<endl;
+cin>>mas[i].Kon;
+cout<<"VVedite ostanovki"<<endl;
+cin>>mas[i].Ost;
+cout<<"VVedite vremya dvigeniya"<<endl;
+cin>>mas[i].Time;
+cout<<"VVedite interval v chas pik"<<endl;
+cin>>mas[i].Interv;
+}
+cout<<"MARSHRUTI INTERVAL V CHAS PIK KOTOROGO < 10 MINUT:"<<endl;
+cout<<"#/KONECHNAYA/INTERVAL"<<endl;
+for(int i=0;i<n;i++)
+{
+if(mas[i].Interv<10)
+{
+V=mas[i].Interv;
+C=mas[i].Num;
+S=mas[i].Kon;
+o=o+1;
+cout<<C<<"/"<<S<<"/"<<V<<endl;
+}
+}
+cout<<"IH KOLICHESTVO="<<o<<endl;
+cin>>ch;
+return 0;
+}

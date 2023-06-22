@@ -1,0 +1,35 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+struct student{
+	char fio[15];
+	int god;
+}el,el1;
+int main()
+{
+	int n;
+ifstream ifile;
+ofstream ofile;
+ofile.open("mydatavvod.txt");
+for (int i=0;i<3;i++)
+{
+	cout<<"imj\n";
+	cin>>el.fio;
+	cout<<"vozrast\n";
+	cin>>el.god;
+	ofile<<el.fio<<endl;
+	ofile<<el.god<<endl;
+}
+ofile.close();
+ifile.open("mydatavivod.txt");
+ifile>>n;cout<<n<<endl;
+for(int i=0;i<3;i++)
+{
+	ifile>>el1.fio;cout<<"imj= ";
+	cout<<el1.fio<<endl;
+	ifile>>el1.god;cout<<"vozrast= ";
+	cout<<el1.god<<endl;
+}
+ifile.close();
+return 0;
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+struct BOOKS
+{
+int Page;
+ char Title[50];
+  int Price;
+	};
+	int main()
+{
+BOOKS mas[10]; int n;
+char ch;
+char *S;
+int C;
+int V;
+cout<<"VVedite chislo knig"<<endl;
+cin>>n;
+cout<<"Zapolnite tablicy"<<endl;
+for (int i=0;i<n;i++)
+{cout<<"VVedite nazmanie knigi"<<endl;
+cin>>mas[i].Title;
+cout<<"VVedite ceny"<<endl;
+cin>>mas[i].Price;
+cout<<"VVedite kolichestvo stranic"<<endl;
+cin>>mas[i].Page;
+}
+cout<<"Vvedite ceny"<<endl;
+cin>>i;
+cout<<"KNIGI CENA KOTORIH MEN'SHE ["<<n<<"]:"<<endl;
+for(int i=0;i<n;i++)
+{
+if(mas[i].Price<i)
+{
+S=mas[i].Title;
+C=mas[i].Price;
+V=mas[i].Page;
+cout<<S<<"   "<<C<<"   "<<V<<endl;
+}
+}
+cin>>ch;
+return 0;
+}

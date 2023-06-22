@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "laba2", "laba2.vcxproj", "{F9AF25E3-199B-44F0-ABB5-E88188537C7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Debug|x64.ActiveCfg = Debug|x64
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Debug|x64.Build.0 = Debug|x64
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Debug|x86.ActiveCfg = Debug|Win32
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Debug|x86.Build.0 = Debug|Win32
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Release|x64.ActiveCfg = Release|x64
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Release|x64.Build.0 = Release|x64
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Release|x86.ActiveCfg = Release|Win32
+		{F9AF25E3-199B-44F0-ABB5-E88188537C7D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {965C4FF1-6ECA-47DD-8044-746AA1BD36DB}
+	EndGlobalSection
+EndGlobal

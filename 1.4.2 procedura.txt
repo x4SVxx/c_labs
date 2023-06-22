@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <stdlib.h>
+using namespace std;
+void display(double num[],int n1,int &i)
+{
+	i=0;
+	for(int k=0;k<n1;k++)
+{if (num[k]<0)
+{i=i+1;}
+if (num[k]>0)
+{num[k]=num[k]/num[k+1];
+}
+}
+}
+int main()
+{
+char ch;
+int n1,i;
+cout<<"Vvedite razmer massiva"<<endl;
+cin>>n1;
+double *A;
+if(n1<0)
+{cout<<"ERROR INPUT"<<endl;
+exit(0);
+}
+A=new double[n1];
+cout<<"Vvedite elementi"<<endl;
+for(int k=0;k<n1;k++)
+{cin>>A[k];
+}
+display(A,n1,i);
+cout<<"delta massive="<<endl;
+for(int k=0;k<n1;k++)
+{cout<<A[k]<<endl;
+}
+cout<<"Sum negative elements="<<i<<endl;
+delete[]A;
+cin>>ch;
+	return 0;
+}

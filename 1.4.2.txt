@@ -1,0 +1,36 @@
+#include<iostream>
+#include<cmath>
+#include<math.h>
+#include<stdlib.h>
+using namespace std;
+int main()
+{const int n=10;
+char ch;
+int n1,i=0;
+cout<<"Vvedite razmer massiva"<<endl;
+cin>>n1;
+if(n1<0||n1>n)
+{cout<<"ERROR INPUT"<<endl;
+exit(0);
+}
+double A[n];
+cout<<"Vvedite elementi"<<endl;
+for(int k=0;k<n1;k++)
+{cin>>A[k];
+}
+for(int k=0;k<n1;k++)
+{if (A[k]<0)
+{i++;
+}
+if (A[k]>0)
+{A[k]=A[k]/A[k+1];
+}
+}
+cout<<"delta massive="<<endl;
+for(int k=0;k<n1;k++)
+{cout<<A[k]<<endl;
+}
+cout<<"Sum negative elements="<<i;
+cin>>ch;
+return 0;
+}

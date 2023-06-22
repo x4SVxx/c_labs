@@ -1,0 +1,48 @@
+#include <iostream>
+#include <cmath>
+#include <math.h>
+#include <stdlib.h>
+using namespace std;
+void display(int n1,double k1,double a[], int &j)
+{
+for(int i=0;i<n1;i++)
+{if (a[i]<k1)
+{a[i]=0;
+j=j+1;
+}
+}
+	cout<<"Massiv="<<endl;
+for (int i=0;i<n1;i++)
+{cout<<a[i]<<"\t";
+}
+cout<<"Kolichestvo zamen="<<j<<endl;
+}
+int main()
+{int n1,l1=0,l2=0;
+const int n=10;
+double A[n];
+double B[n];
+double k;
+char ch;
+cout<<"Vvedite sravnivaemuy velichiny"<<endl;
+cin>>k;
+cout<<"Vvedite razmer massiva"<<endl;
+cin>>n1;
+cout<<"Vvedite elementi pervogo massiva"<<endl;
+for (int i=0;i<n1;i++) {
+cin>>A[i];
+}
+cout<<"Vvedite elementi vtorogo massiva"<<endl;
+for (int i=0;i<n1;i++) {
+cin>>B[i];
+}
+	display(n1,k,A,l1);
+	display(n1,k,B,l2);
+	if (l1>l2) {
+		cout<<"Zamen v pervom bol'she"<<endl;
+		}
+		else
+		{cout<<"Zamen vo vtorom bol'she"<<endl;
+	}
+	cin>>ch;
+}
